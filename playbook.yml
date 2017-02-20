@@ -54,5 +54,5 @@
     shell: docker pull stiago/debian-nginx
 
   vars_files:
-    - vars_nginx.yaml
+    - nginx.yaml
   
