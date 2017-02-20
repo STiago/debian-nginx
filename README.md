@@ -1,4 +1,4 @@
-# Devian nginx
+# devian-nginx
 
 Repository for the task.
 
@@ -8,9 +8,9 @@ Connection SSH:
 
     - Inside the directory .ssh I have created a file with clave named clave.pem
 
-    - Permisos: chmod 400 clave.pem
+    - Permissions: chmod 400 clave.pem
 
-    - Run to connection: ssh admin@52.201.188.38 -i clave.pem
+    - Connection: ssh admin@52.201.188.38 -i clave.pem
 
 ![Image](https://github.com/STiago/debian-nginx/blob/gh-pages/images/t1.png)
 
@@ -42,7 +42,7 @@ Ansible:
 
 Docker:
 
-    - Install in the aws machine docker using: sudo apt-get intsall docker.io
+    - Install docker in the aws machine using: sudo apt-get intsall docker.io
     - I created an automatic build from DockerHub using my Dockerfile which is in my GitHub repository named debian-nginx.
     - Then I did docker pull stiago/debian-nginx
     - sudo service docker start
@@ -60,8 +60,24 @@ Finally we have our container:
 
 ### Orchestation
 
-If I will have more time I could do the orchestation with Vagrant using the vagrantfile and with this I could provisioned and do the container with Ansible and Docker.
+If I would have had more time I could do the orchestation with Vagrant using the vagrantfile and with this I could provision and do the container with Ansible and Docker.
 
+Using aws credential:
+
+```
+export AWS_KEY=[AccessKey]
+export AWS_SECRET=[SecretKey]
+export AWS_SECURITY_GROUP_NAME=[SGName]
+export AWS_KEYNAME=[keyPairName]
+export AWS_KEY_PATH=[Path to your private key]
+```
+    - Install: vagrant plugin instal vagrant-aws
+    
+    - vagrant box add dummy https://......
+
+    - vagrant up --provider=aws
+
+    - vagrant ssh
 
 ### License
 
