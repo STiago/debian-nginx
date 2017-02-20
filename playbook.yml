@@ -31,13 +31,6 @@
       name: nginx
       state: started
 
-  vars_files:
-    - vars_nginx.yaml
-
-  - name: Install extra images
-    apt: name=linux-image-extra-4.4.0-53-generic
-    apt: name=linux-image-extra-virtual
-
   - name: Install curl
     apt: name=curl
 
@@ -59,4 +52,7 @@
 
   - name: Download the container
     shell: docker pull stiago/debian-nginx
+
+  vars_files:
+    - vars_nginx.yaml
   
