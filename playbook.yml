@@ -53,6 +53,5 @@
   - name: Download the container
     shell: docker pull stiago/debian-nginx
 
-  vars_files:
-    - nginx.yaml
+  
   
