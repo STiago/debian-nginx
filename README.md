@@ -7,7 +7,9 @@ Reposiory for the task.
 Connection SSH:
 
     - Inside the directory .ssh I have created a file with clave named clave.pem
+
     - Permisos: chmod 400 clave.pem
+
     - Run to connection: ssh admin@52.201.188.38 -i clave.pem
 
 
@@ -16,10 +18,14 @@ Connection SSH:
 Ansible:
 
     - Install Ansible with: sudo apt-get install ansible
+
     - Creating host, ansible.cfg and playbook.yml files.
+
     - Provisioning with: ansible-playbook playbook.yml
 
-#
+
+### Deployment - Containers
+
 Docker:
 
     - Install in the aws machine docker using: sudo apt-get intsall docker.io
