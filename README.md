@@ -12,6 +12,14 @@ Connection SSH:
 
     - Run to connection: ssh admin@52.201.188.38 -i clave.pem
 
+Creating a new connection: 
+
+    - ssh-keygen -t rsa -b 4096 -C "victoriasantiago@correo.ugr.es"
+    
+    - Copy the contain of: cat id_rsa.pub
+
+    - Put the new key in GitHub.
+
 
 ### Provisioning
 
@@ -33,3 +41,7 @@ Docker:
     - Then I did docker pull stiago/debian-nginx
     - sudo service docker start
     - sudo docker run -it stiago/debian-nginx bash
+
+### Orchestation
+
+If I will have more time I could do the orchestation with Vagrant using the vagrantfile and with this I could provisioned and do the container with Ansible and Docker.
