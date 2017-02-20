@@ -1,2 +1,2 @@
-[nginx]
-172-29-1-56 ansible_ssh_user = 'admin'
+[all] 
+= ''

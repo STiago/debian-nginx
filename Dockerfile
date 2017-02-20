@@ -15,5 +15,7 @@ ENV WEB_ALIAS_DOMAIN *.vm
 RUN /usr/local/bin/apt-install \
         nginx
 
-EXPOSE 80 
-EXPOSE 443 CMD ["supervisord"]
+RUN useradd -m docker && echo "docker:docker" 
+
+USER docker
+CMD /bin/bash
